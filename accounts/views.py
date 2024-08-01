@@ -12,10 +12,15 @@ class UserCreateAndLoginView(CreateView):
 
     def form_valid(self, form):
         response = super().form_valid(form)
-        username = form.cleaned_data.get("username")
-        age = form.cleaned_data.get("age")
+       # username = form.cleaned_data.get("username")
+       # age = form.cleaned_data.get("age")
         email = form.cleaned_data.get("email")
         raw_pw = form.cleaned_data.get("password1")
-        user = authenticate(email=email, username=username, password=raw_pw, age=age,)
+        user = authenticate(
+            email=email,
+            # username=username,
+            password=raw_pw, 
+            #age=age,
+        )
         login(self.request, user)
         return response
