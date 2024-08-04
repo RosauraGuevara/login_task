@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'blog.middleware.auth.AuthMiddleware',
+    'tasks.middleware.auth.AuthMiddleware',
 ]
 
 ROOT_URLCONF = 'loginTask.urls'
